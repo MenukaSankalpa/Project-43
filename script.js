@@ -3,7 +3,7 @@ recognition.Lang = "en-US"
 
 const btn = document.querySelector("#btn")
 btn.addEventListener("click", ()=>{
-    recognition.start()
+    
 
     //convert text to voice
     function speak(text){
@@ -27,10 +27,13 @@ btn.addEventListener("click", ()=>{
     }
     speak("Hello Tom, how can i help you")
 
+    setTimeout(() => {
+        recognition.start();
+    }, 2000);
+
     recognition.onresult= (event)=>{
-        console.log(event)
-
-
-    }
+        const command = event.results[0][0].transcript.toLowerCase()
+        console.log(command)
+    };
 });
 
