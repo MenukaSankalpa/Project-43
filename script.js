@@ -12,15 +12,15 @@ btn.addEventListener("click", ()=>{
     }
 
     function handleCommands(command){
-        if(command.includes("Open youtube")){
-            speak("Opening Youtube... ")
-            window.open("https://www.youtube.com", "_blank")
-        }else if(command.includes("Open facebook")){
-            speak("Opening facebook... ")
-            window.open("https://www.facebook.com", "_blank")
-        }else if(command.includes("Open instagram")){
-            speak("Opening instagram... ")
-            window.open("https://www.instagram.com", "_blank")
+        if(command.includes("open youtube")){
+            speak("Opening Youtube... ");
+            window.open("https://www.youtube.com", "_blank");
+        }else if(command.includes("open facebook")){
+            speak("Opening facebook... ");
+            window.open("https://www.facebook.com", "_blank");
+        }else if(command.includes("open instagram")){
+            speak("Opening instagram... ");
+            window.open("https://www.instagram.com", "_blank");
         }else{
             speak("search on Youtube")
         }
@@ -33,7 +33,7 @@ btn.addEventListener("click", ()=>{
 
     recognition.onresult= (event)=>{
         const command = event.results[0][0].transcript.toLowerCase()
-        console.log(command)
+        handleCommands(command)
     };
 });
 
