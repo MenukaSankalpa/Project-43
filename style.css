@@ -26,12 +26,28 @@ body{
     padding: 60px;
     border-radius: 10px;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
 }
 .container h1{
     font-size: 50px;
     font-weight: 900;
     letter-spacing: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+}
+button{
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: all 0.25s;
+    font-size: 20px;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: black;
 }
